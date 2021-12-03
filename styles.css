@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background:orangered
+ 
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.input label {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.input select {
+  border: none;
+  border-radius: 8px;
+  min-width: 250px;
+  font-size: 16px;
+  padding: 6px;
+  color: black;
+  background-color: rgb(247, 186, 164);
+}
+
+.input select:focus {
+  outline: none;
+}
+
+.circle-wrapper {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.circle-outline {
+  height: 300px;
+  width: 300px;
+  border: solid 10px rgb(243, 134, 62);
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 1px 16px -3px white; 
+}
+
+.circle-progress {
+  width: 50px;
+  height: 50px;
+  background-color: #e95018;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 4px orange;
+  transition: 4s ease all;
+}
+
+.circle-grow {
+  transform: scale(5.3);
+}
+
+.breaths {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.instructions {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+button {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(247, 186, 164);
+  width: 150px;
+  height: 45px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  color: orangered;
+}
+
+.button-inactive {
+  pointer-events: none;
+  background-color: grey;
+}
+
+span{
+    color: yellow;
+}
