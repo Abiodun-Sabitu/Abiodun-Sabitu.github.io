@@ -39,7 +39,11 @@ const breathingApp = () => {
   const breathingAnimation = setInterval(() => {
     if (breathsLeft === 0) {
       clearInterval(breathingAnimation);
-      
+      instructions.innerText = "Session completed! Click Begin to start again";
+      start.classList.remove("button-inactive");
+      breathsLeft = numberOfBreaths.value;
+      breathText.innerText=breathsLeft;
+      return;
     }
     growShrink();
     breatheTextUpdate();
@@ -49,7 +53,14 @@ const breathingApp = () => {
 //Start Breathing
 
 start.addEventListener("click", () => {
-    breathingApp ();
-  growShrink();
-  breatheTextUpdate();
+  start.classList.add("button-inactive");
+  instructions.innerText = "Get ready...";
+  setTimeout(() => {
+    instructions.innerText = "Breathing is about to begin...";
+    setTimeout(() => {
+      breathingApp();
+      growShrink();
+      breatheTextUpdate();
+    }, 2000);
+  }, 2000);
 });
